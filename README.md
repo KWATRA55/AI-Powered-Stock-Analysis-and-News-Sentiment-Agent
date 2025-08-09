@@ -1,12 +1,42 @@
-# AI-Powered-Stock-Analysis-and-News-Sentiment-Agent
+# AI-Powered Stock Analysis & News Sentiment Agent
 
-# This Python-based system dives deep into market data to offer a multi-faceted outlook on publicly traded stocks. Here’s how it works:
+A Python-based system that combines technical market analysis with AI-driven news sentiment evaluation to provide a comprehensive outlook on publicly traded stocks.
 
-# Quantitative Engine: Calculates key technical indicators like SMAs, RSI, and MACD from historical stock data (via yfinance).
+---
 
-# Intelligent News Analysis (with Google Gemini): Fetches a broad set of recent news articles (via NewsAPI).
-Critically, it then uses Google Gemini Pro to perform a relevance check, filtering down to only the news items directly pertinent to the specific stock being analyzed. This was a key iteration to ensure signal quality! For these highly relevant articles, Gemini is again leveraged for nuanced sentiment analysis, determining if the news is positive, negative, or neutral for the stock.
+## 🚀 Features
 
-# Synthesized Outlook: The agent combines these quantitative signals and qualitative news sentiment insights to generate an overall assessment (e.g., "Positive Outlook," "Neutral," "Negative Outlook"), complete with a confidence level and the key drivers behind the assessment.
+### 📊 Quantitative Engine
+- Calculates key technical indicators using **historical stock data** from `yfinance`:
+  - Simple Moving Averages (SMA)
+  - Relative Strength Index (RSI)
+  - Moving Average Convergence Divergence (MACD)
 
-# Tech Backbone: The backend is built with Python and FastAPI, serving up the analysis through a clean API interface.
+### 📰 Intelligent News Analysis (Powered by Google Gemini)
+- Fetches recent **news articles** using `NewsAPI`.
+- Uses **Google Gemini Pro** for:
+  - **Relevance Filtering** – Only includes articles directly related to the target stock.
+  - **Sentiment Analysis** – Determines whether the news is **positive**, **negative**, or **neutral** for the stock.
+
+### 🧠 Synthesized Outlook
+- Merges **technical signals** and **news sentiment** into an overall assessment:
+  - Examples: _Positive Outlook_, _Neutral_, _Negative Outlook_
+- Includes:
+  - Confidence score
+  - Key drivers influencing the assessment
+
+---
+
+## 🛠️ Tech Stack
+- **Backend:** Python + FastAPI
+- **Data Sources:** `yfinance`, `NewsAPI`
+- **AI Analysis:** Google Gemini Pro
+
+---
+
+## 📌 How It Works
+1. Pulls **historical stock data** for technical analysis.
+2. Gathers **recent news articles** for the stock.
+3. Filters news to keep only **highly relevant items**.
+4. Analyzes sentiment using **Google Gemini Pro**.
+5. Combines quantitative + qualitative data into a final stock outlook.
