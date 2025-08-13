@@ -40,3 +40,51 @@ A Python-based system that combines technical market analysis with AI-driven new
 3. Filters news to keep only **highly relevant items**.
 4. Analyzes sentiment using **Google Gemini Pro**.
 5. Combines quantitative + qualitative data into a final stock outlook.
+
+---
+
+## 🖥️ Running the Project Locally
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+```
+
+### 2️⃣ Create and Activate a Virtual Environment
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+*(Windows PowerShell: `venv\Scripts\Activate`)*
+
+### 3️⃣ Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4️⃣ Set Up Environment Variables
+Create a `.env` file in the project root with your API keys:
+```env
+NEWSAPI_KEY=your_newsapi_key_here
+GEMINI_API_KEY=your_gemini_key_here
+```
+
+### 5️⃣ Start the FastAPI Server
+```bash
+uvicorn main:app --reload
+```
+You should see something like:
+```
+Uvicorn running on http://127.0.0.1:8000
+```
+
+### 6️⃣ Access the API Documentation
+- Swagger UI: **http://127.0.0.1:8000/docs**
+- ReDoc: **http://127.0.0.1:8000/redoc**
+
+---
+
+⚠ **Note:**  
+- On macOS, you might see a `NotOpenSSLWarning` from `urllib3` about LibreSSL — it’s harmless and can be ignored.  
+- Make sure you have valid API keys for both **NewsAPI** and **Google Gemini** for the project to run fully.
