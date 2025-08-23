@@ -47,8 +47,8 @@ A Python-based system that combines technical market analysis with AI-driven new
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/KWATRA55/AI-Powered-Stock-Analysis-and-News-Sentiment-Agent.git
+cd <new-repo>
 ```
 
 ### 2️⃣ Create and Activate a Virtual Environment
